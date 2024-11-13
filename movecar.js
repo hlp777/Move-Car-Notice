@@ -45,8 +45,19 @@ async function handleRequest(request) {
         </div>
 
         <script>
+          let lastNotificationTime = 0;
+          const cooldownPeriod = 7000;
           // 调用 Wxpusher API 来发送挪车通知
           function notifyOwner() {
+            const currentTime = Date.now();
+            
+            if (currentTime - lastNotificationTime < cooldownPeriod) {
+              alert("请等待7秒后再次发送通知。");
+              return;
+            }
+
+            lastNotificationTime = currentTime;
+
             fetch("https://wxpusher.zjiecode.com/api/send/message", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
