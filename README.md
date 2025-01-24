@@ -7,3 +7,7 @@
 #### 建议使用severless，可以使用Cloudflare的Workers（免费 -- 就是国内访问需要自己买个域名）
 
 #### 建议把apptoken和uid加密下，以免泄露
+
+
+
+#### --movecarv2.js为最新版本--
