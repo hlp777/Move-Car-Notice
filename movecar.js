@@ -41,7 +41,7 @@ async function handleRequest(request) {
         <div class="container">
           <h1>通知车主挪车</h1>
           <p>如需通知车主，请点击以下按钮</p>
-          <button class="notify-btn">通知车主挪车</button>
+          <button class="notify-btn" onclick="notifyOwner()">通知车主挪车</button>
         </div>
 
         <script>
